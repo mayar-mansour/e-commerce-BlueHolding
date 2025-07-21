@@ -1,0 +1,12 @@
+{
+    "ProductModule": true,
+    "UserModule": true,
+    "RoleModule": true,
+    "OrderModule": true,
+    "RatingModule": true,
+    "PaymentModule": true,
+    "LocationModule": true,
+    "LayoutModule": true,
+    "AdminModule": true
+
+}

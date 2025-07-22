@@ -11,7 +11,7 @@
 
 ## Overview
 
-This enhanced e-commerce platform supports complex product, order management, and payment processing systems, including full CRUD capabilities for products with advanced filtering and ratings. The system provides differentiated roles for vendors, admins, and incorporates comprehensive user permissions. It integrates Stripe for payments and utilizes JWT for authentication along with push notifications for real-time user engagement.
+This enhanced e-commerce platform supports complex product, order management, including full CRUD capabilities for products with advanced filtering and ratings. The system provides differentiated roles for vendors, admins, and incorporates comprehensive user permissions. It integrates  JWT for authentication.
 
 ## Installation
 

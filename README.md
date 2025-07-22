@@ -130,8 +130,3 @@ Centralizes business logic, ensuring high reusability and easier maintenance. Se
 ### Repository Pattern
 
 Promotes a clean separation of concerns and enhances testability. Repositories provide a consistent interface for accessing data layers.
-
-## Notifications and Real-Time Features
-
-- Integration with **Pusher** for real-time notifications.
-

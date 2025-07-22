@@ -1,0 +1,1281 @@
+{
+	"info": {
+		"_postman_id": "1636f5ed-5546-4222-8822-0cdf4ab7eb49",
+		"name": "e-commerce Project BlueHolding",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31835037",
+		"_collection_link": "https://restless-shuttle-781167.postman.co/workspace/ProjectTask~7a809e68-3b88-4cd5-9d34-28c5abf8f3ea/collection/31835037-1636f5ed-5546-4222-8822-0cdf4ab7eb49?action=share&source=collection_link&creator=31835037"
+	},
+	"item": [
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "get All Products",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/product/getAllProducts?price_min=6&sort_by=price&sort_direction=asc&average_rating=0&rating_operator=7=2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"product",
+								"getAllProducts"
+							],
+							"query": [
+								{
+									"key": "price_min",
+									"value": "6"
+								},
+								{
+									"key": "sort_by",
+									"value": "price"
+								},
+								{
+									"key": "sort_direction",
+									"value": "asc"
+								},
+								{
+									"key": "average_rating",
+									"value": "0"
+								},
+								{
+									"key": "rating_operator",
+									"value": "7=2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get Product Detail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/product/getProductDetails/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"product",
+								"getProductDetails",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create Product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "tes",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "ttt",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "categories",
+									"value": "[1,2]",
+									"type": "text"
+								},
+								{
+									"key": "tags",
+									"value": "[2,1]",
+									"type": "text"
+								},
+								{
+									"key": "stock_quantity",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "images[]",
+									"type": "file",
+									"src": [
+										"/C:/Users/7400/Downloads/download (1).jpeg",
+										"/C:/Users/7400/Downloads/download.jpeg"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/product/createProduct",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"product",
+								"createProduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update Product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "mayarf",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "ttt",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "600",
+									"type": "text"
+								},
+								{
+									"key": "categories",
+									"value": "[3,1]",
+									"type": "text"
+								},
+								{
+									"key": "tags",
+									"value": "[3]",
+									"type": "text"
+								},
+								{
+									"key": "stock_quantity",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "images[]",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/product/updateProduct",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"product",
+								"updateProduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete Product",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/product/deleteProduct/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"product",
+								"deleteProduct",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search For Product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "keyword",
+									"value": "tes",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/product/searchForProduct",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"product",
+								"searchForProduct"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product Category",
+			"item": [
+				{
+					"name": "get All Categories",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/product/getAllProductCategories",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"product",
+								"getAllProductCategories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get Product Category Detail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/product/getProductCategoryDetails/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"product",
+								"getProductCategoryDetails",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone",
+									"value": "0126358889480",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/user/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "mayar",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "mayarsoliman57j@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "0126358889480",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "push_token",
+									"value": "555",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "admin",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/user/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get Profile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/user/getProfile",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"getProfile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verify Email",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "verification_code",
+									"value": "896639",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "mayarsoliman31@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/user/verifyEmail",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"verifyEmail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/user/logout",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Role And Permission",
+			"item": [
+				{
+					"name": "assignRole",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "mayarsoliman351@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "adminu",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/assignRole",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"assignRole"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "revokeRole",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "mayarsoliman31@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "vendor",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/revokeRole",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"revokeRole"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer Shipping Adress",
+			"item": [
+				{
+					"name": "UpdateShippingAddress",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "lang",
+								"value": "en",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "additional_phone",
+									"value": "010000100",
+									"type": "text"
+								},
+								{
+									"key": "lat",
+									"value": "20.73737",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "lng",
+									"value": "99",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "test",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "city_id",
+									"value": "6",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "area_id",
+									"value": "4",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "distinct_mark",
+									"value": "test",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/ShippingAddress/update/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"ShippingAddress",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateShippingAddress",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "lang",
+								"value": "en",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "additional_phone",
+									"value": "010000100",
+									"type": "text"
+								},
+								{
+									"key": "lat",
+									"value": "20.73737",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "test",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "lng",
+									"value": "99",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "city_id",
+									"value": "3",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "area_id",
+									"value": "4",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "distinct_mark",
+									"value": "test",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/ShippingAddress/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"ShippingAddress",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteShippingAddress",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "lang",
+								"value": "en",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/ShippingAddress/delete/8",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"ShippingAddress",
+								"delete",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listShippingAddresses",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "lang",
+								"value": "en",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/ShippingAddress/listShippingAddresses",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"ShippingAddress",
+								"listShippingAddresses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "viewShippingAddress",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "lang",
+								"value": "en",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/ShippingAddress/viewShippingAddress/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"ShippingAddress",
+								"viewShippingAddress",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Payment Method",
+			"item": [
+				{
+					"name": "listPaymentMethod",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "lang",
+								"value": "en",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/payment/listPaymentMethods",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"payment",
+								"listPaymentMethods"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "CreateOrder",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "status_id",
+									"value": "2",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "products",
+									"value": "[{\"id\": 2, \"q\": 5},{\"id\": 2, \"q\": 4}]",
+									"description": "required contain id and q=> quantity",
+									"type": "text"
+								},
+								{
+									"key": "payment_method_id",
+									"value": "1",
+									"description": "Payment Method (Cash , Credit)",
+									"type": "text"
+								},
+								{
+									"key": "shipping_address_id",
+									"value": "3",
+									"description": "customer Shipping Address",
+									"type": "text"
+								},
+								{
+									"key": "is_paid",
+									"value": "0",
+									"description": "0 => not paid , 1=> paid",
+									"type": "text"
+								},
+								{
+									"key": "transaction_id",
+									"value": "0",
+									"description": "transaction_id of payment",
+									"type": "text"
+								},
+								{
+									"key": "delivery_fees",
+									"value": "10",
+									"description": "Shipping Fess",
+									"type": "text"
+								},
+								{
+									"key": "notes",
+									"value": "",
+									"description": "Add any notes on order",
+									"type": "text"
+								},
+								{
+									"key": "stripe_payment_method",
+									"value": "pm_1PihMCCQiDDSYOEEzsE3SB9P",
+									"description": "From Stripe Card ",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/order/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"order",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listOfOrders",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "lang",
+								"value": "en",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/order/listOfOrders",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"order",
+								"listOfOrders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "OrderDetails",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "lang",
+								"value": "en",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/order/orderDetails/11",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"order",
+								"orderDetails",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "track Order",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "lang",
+								"value": "en",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/order/trackOrder/11",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"order",
+								"trackOrder",
+								"11"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "Bearer {{token}}",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Order Status",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "status_id",
+									"value": "6",
+									"description": "1--> pending , 2 --> Approved , 3--> Rejected , 4-->Cancelled 5-->Completed, 6--->Cancelled ",
+									"type": "text"
+								},
+								{
+									"key": "order_id",
+									"value": "4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/order/UpdateOrderStatus",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"order",
+								"UpdateOrderStatus"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "Bearer {{token}}",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancel Order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "lang",
+								"value": "en"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "order_id",
+									"value": "4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/order/cancelOrder",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"order",
+								"cancelOrder"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "Bearer {{token}}",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order Statuses",
+			"item": [
+				{
+					"name": "listOrderStatuses",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "lang",
+								"value": "en",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/order/listOrderStatuses",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"order",
+								"listOrderStatuses"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Rate",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "lang",
+								"value": "en",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "comment",
+									"value": "TEST",
+									"type": "text"
+								},
+								{
+									"key": "star",
+									"value": "5",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/user/rating/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"rating",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get OverAll Product Reviews",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "lang",
+								"value": "en"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/user/getOverAllProductRating/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"getOverAllProductRating",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
